@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
@@ -17,26 +18,22 @@ namespace WpfApp1
 {
     public partial class MainWindow : Window
     {
-        int i = 0;
+        int i = 1;
+        int diff = 1;
         public MainWindow()
         {
             InitializeComponent();
-            mujLabel.Content = i;
+            LevelLabel.Content = "Level " + i;
         }
 
        
         private void Odeslat_Click(object sender, RoutedEventArgs e)
         {
             i++;
-            mujLabel.Content = i;
+            LevelLabel.Content = "Level " + i;
         }
 
-        private void ProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            i++;
-            mujLabel.Content = i;
-            progress.Value = i;
-        }
+        
 
         
     }

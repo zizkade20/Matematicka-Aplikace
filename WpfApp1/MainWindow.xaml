@@ -7,11 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Cursor="Cross">
-        <Label x:Name="mujLabel" Content="Level" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
-        <Button x:Name="Odeslat" Content="Odpoved!" HorizontalAlignment="Left" Margin="244,280,0,0" VerticalAlignment="Top" Height="42" Width="120" Click="Odeslat_Click"/>
-        <ProgressBar x:Name="progress" Height="10" Width="100" ValueChanged="ProgressBar_ValueChanged" Margin="350,99,350,325"/>
-        <Label Content="Priklad" HorizontalAlignment="Left" Margin="353,177,0,0" VerticalAlignment="Top" FontSize="32"/>
-        <Button x:Name="Odeslat_Copy" Content="Odpoved!" HorizontalAlignment="Left" Margin="439,280,0,0" VerticalAlignment="Top" Height="42" Width="120" Click="Odeslat_Click"/>
+        <Label x:Name="LevelLabel" Content="Level" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
+        <Button x:Name="Odpoved1" Content="Odpoved!" HorizontalAlignment="Left" Margin="220,280,0,0" VerticalAlignment="Top" Height="42" Width="120" Click="Odeslat_Click"/>
+        <Label x:Name="PrikladLabel" Content="Priklad" HorizontalAlignment="Center" Margin="0,177,0,0" VerticalAlignment="Top" FontSize="32"/>
+        <Button x:Name="Odpoved2" Content="Odpoved!" HorizontalAlignment="Left" Margin="452,275,0,0" VerticalAlignment="Top" Height="42" Width="120" Click="Odeslat_Click"/>
 
     </Grid>
 </Window>
