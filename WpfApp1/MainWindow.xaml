@@ -8,9 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Cursor="Cross">
         <Label x:Name="LevelLabel" Content="Level" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
-        <Button x:Name="Odpoved1" Content="Odpoved!" HorizontalAlignment="Left" Margin="220,280,0,0" VerticalAlignment="Top" Height="42" Width="120" Click="Odeslat_Click"/>
+        <Button x:Name="Odpoved1" Content="Odpoved!" HorizontalAlignment="Left" Margin="220,280,0,0" VerticalAlignment="Top" Height="42" Width="120" Click="Odeslat_ClickTrue"/>
         <Label x:Name="PrikladLabel" Content="Priklad" HorizontalAlignment="Center" Margin="0,177,0,0" VerticalAlignment="Top" FontSize="32"/>
-        <Button x:Name="Odpoved2" Content="Odpoved!" HorizontalAlignment="Left" Margin="452,275,0,0" VerticalAlignment="Top" Height="42" Width="120" Click="Odeslat_Click"/>
+        <Button x:Name="Odpoved2" Content="Odpoved!" HorizontalAlignment="Left" Margin="452,275,0,0" VerticalAlignment="Top" Height="42" Width="120" Click="Odeslat_ClickFalse"/>
 
     </Grid>
 </Window>
