@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     // Definování proměnných, které budu používat skrze celý kód
-    class Variables
+    class Globals
     {
         
         public static string answer { get; set; } // správná odpověď, kterou budu porovnávat s contentem buttonu
@@ -34,10 +34,10 @@ namespace WpfApp1
         {
             InitializeComponent();
             // Starting level nastavím na 1
-            Variables.level = 1;
+            Globals.level = 1;
 
             // Zobrazím příklad
-            DisplayMultiplicationProblem(Variables.level);
+            DisplayMultiplicationProblem(Globals.level);
 
 
         }
@@ -48,19 +48,19 @@ namespace WpfApp1
             string ButtonVal;
             // Načtu si hodnotu z bottonu, pokud se rovná výsledku, hráč uhádl správně
             ButtonVal = (sender as System.Windows.Controls.Button).Content.ToString();
-            if (Variables.answer == ButtonVal)
+            if (Globals.answer == ButtonVal)
             {
                 // Zvýšim level o 1 a vypíšu nový příklad
-                Variables.level += 1;
+                Globals.level += 1;
                 // Metoda na zobrazení nového přkladu
-                DisplayMultiplicationProblem(Variables.level);
+                DisplayMultiplicationProblem(Globals.level);
             }
             else
             {
                 // Resetuji level na 1 a vypíšu příklad
-                Variables.level = 1;
+                Globals.level = 1;
                 // Metoda na zobrazení nového přkladu
-                DisplayMultiplicationProblem(Variables.level);
+                DisplayMultiplicationProblem(Globals.level);
 
             }
 
@@ -70,7 +70,7 @@ namespace WpfApp1
         private void DisplayMultiplicationProblem(int level)
         {
             
-            LevelLabel.Content = "Level " + Variables.level;
+            LevelLabel.Content = "Level " + Globals.level;
 
             // hráčovi se zobrazují příklady s čísly podle toho, v jakém je levelu
             if (level <= 3)
@@ -138,7 +138,7 @@ namespace WpfApp1
         private void CreateMultiplicationProblem(int x, int y)
         {
             // Vynulování předchozí odpovědi, pokud nějaká už byla
-            Variables.answer = "";
+            Globals.answer = "";
             int SpravnyVysledek = x * y;
 
             PrikladLabel.Content = $"kolik je {x} x {y}?";
@@ -156,7 +156,7 @@ namespace WpfApp1
                 Odpoved1.Content = SpravnyVysledek + y + x;
             }
             // Správný výsledek dosadím do proměnné answer, kterou pak budu porovnávat s odpovědí hráče
-            Variables.answer += SpravnyVysledek;
+            Globals.answer += SpravnyVysledek;
         }
 
     }
