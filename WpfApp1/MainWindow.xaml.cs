@@ -142,18 +142,58 @@ namespace WpfApp1
             int SpravnyVysledek = x * y;
 
             PrikladLabel.Content = $"kolik je {x} x {y}?";
-
-            // Přiřazení odpovědí náhodně do buttonů
+            
+            
             int randomiseButton = random.Next(2);
+            int randomiseButton2 = random.Next(4);
+            // Přiřazení odpovědí náhodně do buttonů
+
             if (randomiseButton == 0)
             {
                 Odpoved1.Content = SpravnyVysledek;
-                Odpoved2.Content = SpravnyVysledek + x + y;
+                if (randomiseButton2 == 0)
+                {
+                    Odpoved2.Content = SpravnyVysledek + x;
+
+                }
+                else if (randomiseButton2 == 1)
+                {
+                    Odpoved2.Content = SpravnyVysledek - x;
+
+                } else if (randomiseButton2 == 2)
+                {
+                    Odpoved2.Content = SpravnyVysledek + y;
+
+                }
+                else
+                {
+                    Odpoved2.Content = SpravnyVysledek - y;
+
+                }
             }
             else
             {
                 Odpoved2.Content = SpravnyVysledek;
-                Odpoved1.Content = SpravnyVysledek + y + x;
+                if (randomiseButton2 == 0)
+                {
+                    Odpoved1.Content = SpravnyVysledek + x;
+
+                }
+                else if (randomiseButton2 == 1)
+                {
+                    Odpoved1.Content = SpravnyVysledek - x;
+
+                }
+                else if (randomiseButton2 == 2)
+                {
+                    Odpoved1.Content = SpravnyVysledek + y;
+
+                }
+                else
+                {
+                    Odpoved1.Content = SpravnyVysledek - y;
+
+                }
             }
             // Správný výsledek dosadím do proměnné answer, kterou pak budu porovnávat s odpovědí hráče
             Globals.answer += SpravnyVysledek;
